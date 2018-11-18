@@ -3,12 +3,12 @@ import PictureCards from "./components/PictureCards";
 import Navbar from "./components/NavBar";
 import Jumbotron from "./components/Jumbotron";
 import Wrapper from "./components/GameWrapper";
-import friends from "./friends.json";
+import dinosaurs from "./dinosaurs.json";
 import "./App.css";
 
 class App extends Component {
   state = {
-    currentSet: friends,
+    currentSet: dinosaurs,
     currentSetCount: 0,
     highScore: 0,
     score: 0,
