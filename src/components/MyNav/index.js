@@ -43,7 +43,7 @@ export default class MyNavBar extends Component {
         <Wrapper>
           <h1>Colton Scherer</h1>
           <nav>
-            <div class="btn-group">
+            <div className="btn-group">
               {mainRoutes.reverse().map(route => (
                 <Link 
                   to={`/${route.route}`} 

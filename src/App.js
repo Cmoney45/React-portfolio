@@ -14,7 +14,7 @@ class App extends Component {
       <Router>
         <div className="App">
           <Nav />
-          <Wrapper>
+          <Wrapper classPass="push">
             <div id="main-body">
               <Switch id="main-body">
                 <Route exact path="/" component={Home} />

@@ -1,14 +1,19 @@
 import React, { Component } from 'react';
 import "./style.css";
 
-class WrapperComponent extends Component {
+class Wrapper extends Component {
+
     render() {
+        const trueClassName = `wrapper ${this.props.classPass}`;
+
         return (
-            <div className="wrapper">
+            <div
+                className={trueClassName}
+            >
                 {this.props.children}
             </div>
         );
     }
 }
 
-export default WrapperComponent;
+export default Wrapper;
