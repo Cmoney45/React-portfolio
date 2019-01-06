@@ -32,7 +32,8 @@ export default class MyNavBar extends Component {
                     target="_blank"
                     rel="noopener"
                 >
-                    <i className="fab fa-github fa-2x"></i></a>
+                    <i className="fab fa-github fa-2x"></i>
+                </a>
                 <p> Work of University of MN Bootcamp </p>
             </footer>
         );
