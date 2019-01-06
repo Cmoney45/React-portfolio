@@ -56,7 +56,7 @@ export default class MyNavBar extends Component {
             <div className="btn-group">
               {mainRoutes.reverse().map(route => (
                 <Link
-                  to={`${route.route}`}
+                  to={`React-portfolio/${route.route}`}
                   key={route.number}
                   className={this.state.currentPage === route.route ? "button currentPage" : "button"}
                   onClick={() => this.changeCurrentPage(route.route)}
