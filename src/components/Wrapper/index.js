@@ -1,3 +1,5 @@
+// client.src.components.Wrapper
+
 import React, { Component } from 'react';
 import "./style.css";
 
@@ -17,3 +19,4 @@ class Wrapper extends Component {
 }
 
 export default Wrapper;
+ 

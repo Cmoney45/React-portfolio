@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import "./style.css";
 
 export default class MyNavBar extends Component {
     constructor(props) {
@@ -19,8 +20,19 @@ export default class MyNavBar extends Component {
 
         return (
             <footer>
-                <a href="https://www.linkedin.com/in/colton-scherer-11161b83/" target="_blank"><i className="fab fa-linkedin fa-2x"></i></a>
-                <a href="https://github.com/Cmoney45" target="_blank"><i className="fab fa-github fa-2x"></i></a>
+                <a
+                    href="https://www.linkedin.com/in/colton-scherer-11161b83/"
+                    target="_blank"
+                    rel="noopener"
+                >
+                    <i className="fab fa-linkedin fa-2x"></i>
+                </a>
+                <a
+                    href="https://github.com/Cmoney45"
+                    target="_blank"
+                    rel="noopener"
+                >
+                    <i className="fab fa-github fa-2x"></i></a>
                 <p> Work of University of MN Bootcamp </p>
             </footer>
         );

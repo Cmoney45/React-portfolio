@@ -1,3 +1,5 @@
+// client.src.components.MyNav
+
 import React, { Component } from 'react';
 import { Link } from "react-router-dom";
 
@@ -8,32 +10,40 @@ export default class MyNavBar extends Component {
   constructor(props) {
     super(props);
 
-    this.toggle = this.toggle.bind(this);
     this.state = {
-      isOpen: false
+      currentPage: "",
     };
   }
-  toggle() {
+
+  componentDidMount() {
+    this.setState(
+      {
+        currentPage: window.location.pathname
+      }
+    )
+  }
+
+  changeCurrentPage = (route) => {
     this.setState({
-      isOpen: !this.state.isOpen
-    });
+      currentPage: route
+    })
   }
 
   render() {
     const mainRoutes = [
       {
         text: "About",
-        route: "",
+        route: "/",
         number: 1,
       },
       {
         text: "Portfolio",
-        route: "portfolio",
+        route: "/portfolio",
         number: 2,
       },
       {
         text: "Contact",
-        route: "contact",
+        route: "/contact",
         number: 3,
       },
     ]
@@ -45,11 +55,12 @@ export default class MyNavBar extends Component {
           <nav>
             <div className="btn-group">
               {mainRoutes.reverse().map(route => (
-                <Link 
-                  to={`/${route.route}`} 
+                <Link
+                  to={`${route.route}`}
                   key={route.number}
-                  className="button"
-                  >
+                  className={this.state.currentPage === route.route ? "button currentPage" : "button"}
+                  onClick={() => this.changeCurrentPage(route.route)}
+                >
                   {route.text}
                 </Link>
               ))}

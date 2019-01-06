@@ -1,27 +1,16 @@
 // client.src.pages.Home.js
 
 import React, { Component } from "react";
-import "./css-temp/contact-css.css";
+import BodyHeader from "../components/BodyHeader";
+import ContactForm from "../components/ContactForm";
 
 class Home extends Component {
 
   render() {
     return (
-      <div
-        // className="hidden-part"
-        id="contactBody"
-      >
-        <form id="body" method="post">
-          Name
-          <input type="text" name="name"></input>
-          E-mail
-          <input type="email" name="email"></input>
-
-          Message
-          <textarea name="message"></textarea>
-
-          <input type="submit" value="Submit"></input>
-        </form>
+      <div>
+        <BodyHeader headerTitle="Contact Me" />
+        <ContactForm />
       </div>
     );
   }
